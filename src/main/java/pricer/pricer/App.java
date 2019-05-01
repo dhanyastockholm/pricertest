@@ -2,6 +2,7 @@ package pricer.pricer;
 
 /**
  * Hello world!
+ * 
  *
  */
 public class App 
