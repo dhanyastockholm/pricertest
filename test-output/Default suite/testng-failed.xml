@@ -8,8 +8,6 @@
           <include name="tearDown"/>
           <include name="productName"/>
           <include name="setUp"/>
-          <include name="visiblityOfSellButton"/>
-          <include name="setDecimalAmount"/>
         </methods>
       </class> <!-- com.java.Scenario.RunTest -->
     </classes>

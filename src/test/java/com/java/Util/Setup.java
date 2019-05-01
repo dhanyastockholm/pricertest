@@ -15,7 +15,7 @@ public class Setup {
         System.setProperty("webdriver.chrome.driver", "./src/test/java/com/java/BrowserDrivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("file:///D:/Pricer/dhanya_test-master/index.html");
+        driver.get("https://sukram-89.github.io/store/");
     }
 
 
