@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Gopi\AppData\Local\Temp\testng-eclipse-1612622791\testng-customsuite.xml</span>
+                    <span>C:\Users\Gopi\AppData\Local\Temp\testng-eclipse-831868226\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.java.Scenario.RunTest" hash-for-method="productName">productName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.java.Scenario.RunTest" hash-for-method="validateDecimalAmount">validateDecimalAmount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,7 +126,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.java.Scenario.RunTest" hash-for-method="visiblityOfSellButton">visiblityOfSellButton</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.java.Scenario.RunTest" hash-for-method="sellButtonVisiblity">sellButtonVisiblity</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -154,7 +159,49 @@
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
 	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.java.Scenario.RunTest.productName(RunTest.java:55)
+	at com.java.Scenario.RunTest.productName(RunTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDecimalAmount">
+                  </a> <!-- validateDecimalAmount -->
+                  <span class="method-name">validateDecimalAmount</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at com.java.Scenario.RunTest.validateDecimalAmount(RunTest.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -201,9 +248,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="visiblityOfSellButton">
-                  </a> <!-- visiblityOfSellButton -->
-                  <span class="method-name">visiblityOfSellButton</span>
+                  <a name="sellButtonVisiblity">
+                  </a> <!-- sellButtonVisiblity -->
+                  <span class="method-name">sellButtonVisiblity</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -211,7 +258,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Gopi\AppData\Local\Temp\testng-eclipse-1612622791\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Gopi\AppData\Local\Temp\testng-eclipse-831868226\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -260,24 +307,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'productName')
 data.setCell(0, 2, 'com.java.Scenario.RunTest')
-data.setCell(0, 3, 2134);
+data.setCell(0, 3, 1197);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'purchaseSingleItem')
 data.setCell(1, 2, 'com.java.Scenario.RunTest')
-data.setCell(1, 3, 1218);
+data.setCell(1, 3, 1084);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'visiblityOfSellButton')
+data.setCell(2, 1, 'sellButtonVisiblity')
 data.setCell(2, 2, 'com.java.Scenario.RunTest')
-data.setCell(2, 3, 1125);
+data.setCell(2, 3, 847);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateDecimalAmount')
+data.setCell(3, 2, 'com.java.Scenario.RunTest')
+data.setCell(3, 3, 747);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -319,19 +370,25 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">productName</span>
-                <span class="method-start">8216 ms</span>
+                <span class="method-start">7035 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">purchaseSingleItem</span>
-                <span class="method-start">10363 ms</span>
+                <span class="method-start">8243 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">visiblityOfSellButton</span>
-                <span class="method-start">11585 ms</span>
+                <span class="method-name">sellButtonVisiblity</span>
+                <span class="method-start">9331 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateDecimalAmount</span>
+                <span class="method-start">10187 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">12714 ms</span>
+                <span class="method-start">10941 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

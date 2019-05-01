@@ -8,6 +8,7 @@
           <include name="tearDown"/>
           <include name="productName"/>
           <include name="setUp"/>
+          <include name="validateDecimalAmount"/>
         </methods>
       </class> <!-- com.java.Scenario.RunTest -->
     </classes>

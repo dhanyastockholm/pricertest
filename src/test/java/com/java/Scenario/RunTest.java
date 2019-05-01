@@ -15,8 +15,6 @@ public class RunTest extends Setup {
 		StorePage storePage = new StorePage(driver);
 		PriceTable priceTable = new PriceTable(driver);
 		int intialMoney = Integer.parseInt(storePage.moneyAvailable());
-		System.out.println(intialMoney);
-		System.out.println(priceTable.getProductPrice("Orange"));
 		storePage.enterAmount("1");
 		storePage.selectItemToBuy("Orange");
 		storePage.buyItem();
@@ -29,8 +27,6 @@ public class RunTest extends Setup {
 		StorePage storePage = new StorePage(driver);
 		PriceTable priceTable = new PriceTable(driver);
 		int intialMoney = Integer.parseInt(storePage.moneyAvailable());
-		System.out.println(intialMoney);
-		System.out.println(priceTable.getProductPrice("Orange"));
 		storePage.enterAmount("1");
 		storePage.selectItemToBuy("Orange");
 		storePage.buyItem();
@@ -39,39 +35,42 @@ public class RunTest extends Setup {
 	}
 
 	@Test
-	// Assertion Error occurs. Failure test case
+	// Assertion Error occurs. Failure test case for product name mismatch
 	public void productName() throws Exception {
 		String productName = "Samsung S5";
 		StorePage storePage = new StorePage(driver);
-		PriceTable priceTable = new PriceTable(driver);
-		int intialMoney = Integer.parseInt(storePage.moneyAvailable());
-		System.out.println(intialMoney);
-		System.out.println(priceTable.getProductPrice(productName));
 		storePage.enterAmount("1");
 		storePage.selectItemToBuy(productName);
 		storePage.buyItem();
 		ReceiptTable receiptTable = new ReceiptTable(driver);
-		System.out.println("receiptTable.productName()..." + receiptTable.productName());
 		Assert.assertEquals(productName, receiptTable.productName());
 
 	}
 
 	@Test
-	public void visiblityOfSellButton() throws Exception {
-		String productName = "Samsung S5";
+	public void sellButtonVisiblity() throws Exception {
+		String productName = "Banana";
 		StorePage storePage = new StorePage(driver);
 		PriceTable priceTable = new PriceTable(driver);
-		int intialMoney = Integer.parseInt(storePage.moneyAvailable());
-		System.out.println(intialMoney);
-		System.out.println(priceTable.getProductPrice(productName));
+		priceTable.getProductPrice(productName);
 		storePage.enterAmount("1");
 		storePage.selectItemToBuy(productName);
 		storePage.buyItem();
 		ReceiptTable receiptTable = new ReceiptTable(driver);
-		System.out.println("receiptTable.sellButtonIsPresent()..." + receiptTable.sellButtonIsPresent());
 		Assert.assertEquals(true, receiptTable.sellButtonIsPresent());
 
 	}
-	
-	
+
+	@Test
+	// Assertion Error. Failure test case foe decimal bug
+	public void validateDecimalAmount() throws Exception {
+
+		StorePage storePage = new StorePage(driver);
+		ReceiptTable receiptTable = new ReceiptTable(driver);
+		storePage.selectItemToBuy("Grape");
+		storePage.enterAmount("2.6");
+		storePage.buyItem();
+		Assert.assertEquals(false, receiptTable.sellButtonIsPresent());
+	}
+
 }

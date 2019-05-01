@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="4" passed="2">
+<testng-results skipped="0" failed="2" ignored="1" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12929" started-at="2019-05-01T22:03:26Z" finished-at="2019-05-01T22:03:39Z">
+  <suite name="Default suite" duration-ms="11242" started-at="2019-05-01T22:20:16Z" finished-at="2019-05-01T22:20:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12929" started-at="2019-05-01T22:03:26Z" finished-at="2019-05-01T22:03:39Z">
+    <test name="Default test" duration-ms="11242" started-at="2019-05-01T22:20:16Z" finished-at="2019-05-01T22:20:27Z">
       <class name="com.java.Scenario.RunTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="setUp" is-config="true" duration-ms="8191" started-at="2019-05-01T22:03:27Z" finished-at="2019-05-01T22:03:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="setUp" is-config="true" duration-ms="7010" started-at="2019-05-01T22:20:16Z" finished-at="2019-05-01T22:20:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="productName()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="productName" duration-ms="2134" started-at="2019-05-01T22:03:35Z" finished-at="2019-05-01T22:03:37Z">
+        <test-method status="FAIL" signature="productName()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="productName" duration-ms="1197" started-at="2019-05-01T22:20:23Z" finished-at="2019-05-01T22:20:24Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Bicycle] but found [Samsung S5]]]>
@@ -24,7 +24,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at com.java.Scenario.RunTest.productName(RunTest.java:55)
+at com.java.Scenario.RunTest.productName(RunTest.java:46)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -56,15 +56,60 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productName -->
-        <test-method status="PASS" signature="purchaseSingleItem()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="purchaseSingleItem" duration-ms="1218" started-at="2019-05-01T22:03:37Z" finished-at="2019-05-01T22:03:38Z">
+        <test-method status="PASS" signature="purchaseSingleItem()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="purchaseSingleItem" duration-ms="1084" started-at="2019-05-01T22:20:24Z" finished-at="2019-05-01T22:20:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- purchaseSingleItem -->
-        <test-method status="PASS" signature="visiblityOfSellButton()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="visiblityOfSellButton" duration-ms="1125" started-at="2019-05-01T22:03:38Z" finished-at="2019-05-01T22:03:39Z">
+        <test-method status="PASS" signature="sellButtonVisiblity()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="sellButtonVisiblity" duration-ms="847" started-at="2019-05-01T22:20:26Z" finished-at="2019-05-01T22:20:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- visiblityOfSellButton -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="tearDown" is-config="true" duration-ms="191" started-at="2019-05-01T22:03:39Z" finished-at="2019-05-01T22:03:39Z">
+        </test-method> <!-- sellButtonVisiblity -->
+        <test-method status="FAIL" signature="validateDecimalAmount()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="validateDecimalAmount" duration-ms="747" started-at="2019-05-01T22:20:26Z" finished-at="2019-05-01T22:20:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:568)
+at org.testng.Assert.assertEquals(Assert.java:578)
+at com.java.Scenario.RunTest.validateDecimalAmount(RunTest.java:72)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDecimalAmount -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.java.Scenario.RunTest@5bcab519]" name="tearDown" is-config="true" duration-ms="277" started-at="2019-05-01T22:20:27Z" finished-at="2019-05-01T22:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
