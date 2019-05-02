@@ -43,7 +43,7 @@ public class RunTest extends Setup {
 		storePage.selectItemToBuy(productName);
 		storePage.buyItem();
 		ReceiptTable receiptTable = new ReceiptTable(driver);
-		Assert.assertEquals(productName, receiptTable.productName());
+		Assert.assertEquals(receiptTable.productName(), productName);
 
 	}
 
@@ -57,12 +57,12 @@ public class RunTest extends Setup {
 		storePage.selectItemToBuy(productName);
 		storePage.buyItem();
 		ReceiptTable receiptTable = new ReceiptTable(driver);
-		Assert.assertEquals(true, receiptTable.sellButtonIsPresent());
+		Assert.assertEquals(receiptTable.sellButtonIsPresent(), true);
 
 	}
 
 	@Test
-	// Assertion Error. Failure test case foe decimal bug
+	// Assertion Error. Failure test case for decimal bug
 	public void validateDecimalAmount() throws Exception {
 
 		StorePage storePage = new StorePage(driver);
@@ -70,7 +70,27 @@ public class RunTest extends Setup {
 		storePage.selectItemToBuy("Grape");
 		storePage.enterAmount("2.6");
 		storePage.buyItem();
-		Assert.assertEquals(false, receiptTable.sellButtonIsPresent());
+		Assert.assertEquals(receiptTable.sellButtonIsPresent(), false);
 	}
 
+	@Test
+	public void clickBuyWithoutProduct() throws Exception {
+
+		String expectedMessage = "Please select a product!";
+		StorePage storePage = new StorePage(driver);
+		storePage.buyItem();
+		String gotmessage = storePage.getMessage();
+		Assert.assertEquals(gotmessage, expectedMessage);
+	}
+
+	@Test
+	// Assertion Error. Amount not entered but product is getting purchased.
+	public void amountNotEntered() throws Exception {
+
+		StorePage storePage = new StorePage(driver);
+		ReceiptTable receiptTable = new ReceiptTable(driver);
+		storePage.selectItemToBuy("Chair");
+		storePage.buyItem();
+		Assert.assertEquals(receiptTable.sellButtonIsPresent(), false);
+	}
 }

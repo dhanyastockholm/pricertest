@@ -45,4 +45,8 @@ public class StorePage extends PageObject {
 		return this.wMoney.getText();
 	}
 
+	public String getMessage() {
+		return this.wMessage.getText();
+	}
+
 }
